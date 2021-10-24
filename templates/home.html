@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+	{% if title %}
+		<title>Dr.Answer - {{ title }}</title>
+	{% else %}
+		<title>Dr.Answer</title>
+	{% endif %}
+</head>
+<body>
+	
+	  <div class="bg-img">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="{{ url_for('home') }}">Dr.Answer</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="{{ url_for('heartdisease') }}" style="margin-left:10px;">Heart Disease<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('liverdisease') }}" style="margin-left:10px;">Liver Disease</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('breastcancer') }}" style="margin-left:10px;">Breast Cancer</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('malariadisease') }}" style="margin-left:10px;">Malaria</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('pneumoniadisease') }}" style="margin-left:10px;">Pneumonia</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('about') }}" style="margin-left:10px;">About Us</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+	</div>   
+
+	<div id="homepage">
+      <h1 style="text-decoration:underline">Dr.Answer</h1>
+    	<br>
+      <h5>Artificial intelligence (AI) research in healthcare is accelerating rapidly, with potential applications being demonstrated across various domains of medicine. However, there are currently limited examples of such techniques being successfully deployed into clinical practice.</h5>
+      <h5>The goal of this project is to implement Deep learning in medical science.</h5>
+      <h5>This project is all about a Machine Learning based Medical Test web app which makes predictions about various diseases using AI.</h5>
+      <h5>We have covered many different Diseases and ML/Deep Learning Models some of which include:-</h5>
+      <h5>1. Heart Disease Prediction.</h5>
+      <h5>2. Liver Disease Prediction.</h5>
+      <h5>3. Breast Cancer.</h5>
+      <h5>4. Malaria. </h5>
+      <h5>5. Pneumonia.</h5>
+        </div>        
+    </div>
+
+
+<!-- Main Content  -->
+
+<!-- SERVICE PART -->
+    <section style="margin-top:-40px">
+        <div class="container-fluid">
+            <h1 class="text-center text-capilatize pt-5" style="text-decoration:underline">Diseases</h1>
+            <hr class="w-25 mx-auto pt-5">
+
+            <div class="row text-center mb-5" style="background-color:">
+                <div class="col-lg-4 col-md-4 col-12">
+                    <div class="card" style="width:400px">
+                        <img class="card-img-top" src="/static/heartdisease.jpg" alt="Card image">
+                        <div class="card-body" style="background-color:#C0C0C0">
+                            <h4 class="card-title">Heart Disease</h4>
+                            <p class="card-text">Heart Disease Predictor ML Application</p>
+                            <a href="{{ url_for('heartdisease')}}" class="btn btn-primary">Heart Disease</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-12">
+                    <div class="card" style="width:400px">
+                        <img class="card-img-top" src="/static/liverdisease.jpg" alt="Card image">
+                        <div class="card-body" style="background-color:#C0C0C0">
+                            <h4 class="card-title">Liver Disease</h4>
+                            <p class="card-text">Liver Disease Predictor ML Application</p>
+                            <a href="{{ url_for('liverdisease')}}" class="btn btn-primary">Liver Disease</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-12">
+                    <div class="card" style="width:400px">
+                        <img class="card-img-top" src="/static/malignant.jpg" alt="Card image">
+                        <div class="card-body" style="background-color:#C0C0C0">
+                            <h4 class="card-title">Breast Cancer</h4>
+                            <p class="card-text">Breast Cancer Predictor ML Application</p>
+                            <a href="{{ url_for('breastcancer')}}" class="btn btn-primary">Breast Cancer</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+    </section>
+    <section>
+        <div class="container-fluid">
+            <div class="row text-center mb-5">
+                <div class="col-lg-4 col-md-4 col-12">
+                    <div class="card" style="width:400px">
+                        <img class="card-img-top" src="/static/malaria.jpg" alt="Card image">
+                        <div class="card-body" style="background-color:#C0C0C0">
+                            <h4 class="card-title">Malaria</h4>
+                            <p class="card-text">Malaria Disease Image Classifier</p>
+                            <a href="{{ url_for('malariadisease')}}" class="btn btn-primary">Malaria</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-12">
+                    <div class="card" style="width:400px">
+                        <img class="card-img-top" src="/static/pneumonia.jpg" alt="Card image">
+                        <div class="card-body" style="background-color:#C0C0C0">
+                            <h4 class="card-title">Pneumonia</h4>
+                            <p class="card-text">Pneumonia Disease Image Classifier</p>
+                            <a href="{{ url_for('pneumoniadisease')}}" class="btn btn-primary">Pneumonia</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+    </section>
+
+    <!-- services end -->
+
+<!-- Main Content  -->
+
+ <footer class="bg-white" id="footerLast">
+     <div class="container py-5">
+         <div class="row py-3">
+             <div class="col-lg-2 col-md-6 mb-4 mb-lg-0" style="margin-left:100px; font-size:20px">
+                 <h6 class="text-uppercase font-weight-bold mb-4" style="color:white">About</h6>
+                 <ul class="list-unstyled mb-0">
+                     <li class="mb-2"><a href="{{ url_for('about') }}" class="text-muted">Contact Us</a></li>
+                     <li class="mb-2"><a href="{{ url_for('about') }}" class="text-muted">About Us</a></li>
+                     <li class="mb-2"><a href="{{ url_for('about') }}" class="text-muted">Stories</a></li>
+                 </ul>
+             </div>
+             <div class="col-lg-2 col-md-6 mb-4 mb-lg-0" style="margin-left:100px; font-size:20px">
+                 <h6 class="text-uppercase font-weight-bold mb-4" style="color:white">Policy</h6>
+                 <ul class="list-unstyled mb-0">
+                     <li class="mb-2"><a href="#" class="text-muted">Return Policy</a></li>
+                     <li class="mb-2"><a href="#" class="text-muted">Terms Of Use</a></li>
+                     <li class="mb-2"><a href="#" class="text-muted">Security</a></li>
+                 </ul>
+             </div>
+
+             <div class="col-lg-4 col-md-6 mb-lg-0" style="margin-left:100px; font-size:20px">
+                 <h6 class="text-uppercase font-weight-bold mb-4" style="color:white">Registered Office Address</h6>
+                 <p class="text-muted mb-4">KC College of Engineering Management Studies and Research</p>
+             </div>
+         </div>
+     </div>
+     <hr class="p-0 m-0 b-0">
+     <div class="bg-light py-2">
+         <div class="container text-center">
+             <p class="text-muted mb-0 py-2">© 2021 Dr.Answer All rights reserved.</p>
+         </div>
+     </div>
+ </footer>
+
+
+    <style>
+
+    #footerLast {
+    background: #6fbbd3;
+    background: -webkit-linear-gradient(to right, #00001a, #00004d);
+    background: linear-gradient(to right, #00001a, #00004d);
+    min-height: 50vh;
+    font-family: 'Sanchez', serif
+}
+
+#button-addon1 {
+    color: #ffc371
+}
+
+i {
+    color: #0000cc;
+    font-size: 40px
+}
+
+.form-control::placeholder {
+    font-size: 4.3rem;
+    color: #aaa;
+    font-style: italic
+}
+
+.form-control.shadow-0:focus {
+    box-shadow: none
+}
+
+.display-3 {
+    font-family: 'Sanchez', serif
+}
+
+p {
+    font-family: 'Tajawal', sans-serif
+}
+
+.lead {
+    font-family: 'Sanchez 200', serif
+}
+
+
+
+       body {font-family: Arial, Helvetica, sans-serif;}
+        * {box-sizing: border-box;}
+        
+      .bg-img {
+          /* The image used */
+          background-image: url("/static/HealthCare.jpg");
+
+          min-height: 500px;
+
+          /* Center and scale the image nicely */
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+
+          /* Needed to position the navbar */
+          position: relative;
+        }
+
+        /* Position the navbar container inside the image */
+        .container {
+          position: absolute;
+          margin: 20px;
+          width: auto;
+        }
+
+        /* The navbar */
+        .topnav {
+          overflow: hidden;
+          background-color: #29AB87;
+        }
+
+        /* Navbar links */
+        .topnav a {
+          float: left;
+          color: #f2f2f2;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+          font-size: 18px;
+        }
+
+        .topnav a:hover {
+          background-color: #ddd;
+          color: black;
+        }
+
+        .centered {
+            position: absolute;
+            top: 75%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+          }
+
+
+        #homepage {
+          padding: 20px;
+          border-spacing: 15px;
+          text-align: justify;
+          border-bottom-left-radius: 25px;
+          border-bottom-right-radius: 25px;
+        }
+
+        .img_holder img{
+            max-width: 100%; max-height: 100%;
+        }
+
+        .navbar{ 
+            background-color:#008081;
+        }
+
+        .one{
+            padding: 0px 10px;
+            display: inline-block;
+            margin: 4px 2px;
+        }
+
+        footer {
+          text-align: left;
+          padding: 3px;
+          background-color: white;
+          color: black;
+          position: relative;
+          margin-top : 110px;
+          width: 100%;
+
+        }
+
+        .a {
+          display: inline;
+          color: #32527B;
+        }
+
+        button {
+          background-color: #CD5C5C;
+          border: none;
+          min-width:180px;
+          color: white;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;
+          cursor: pointer;
+        }
+
+        
+    </style>   
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</body>
+</html>
